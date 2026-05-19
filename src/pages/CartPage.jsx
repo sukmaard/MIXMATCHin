@@ -123,7 +123,6 @@ const CartPage = () => {
               onClick={handleCheckout}
               disabled={checkoutPending}
               className="flex-1 luxury-btn bg-luxury-black text-luxury-white hover:bg-luxury-black/90"
-              disabled={checkoutPending}
             >
               {checkoutPending ? 'Processing...' : 'Proceed to Checkout'}
             </button>
