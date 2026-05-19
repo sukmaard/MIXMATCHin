@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components {
+  .luxury-btn {
+    @apply bg-luxury-black text-luxury-white px-6 py-3 rounded-lg font-medium 
+           transition-all duration-300 hover:bg-luxury-black/90 
+           hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2;
+  }
+  
+  .luxury-btn-outline {
+    @apply border border-luxury-black text-luxury-black px-6 py-3 rounded-lg font-medium 
+           transition-all duration-300 hover:bg-luxury-black/5 
+           focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2;
+  }
+  
+  .luxury-card {
+    @apply bg-luxury-white border border-luxury-black/10 rounded-lg 
+           shadow-sm transition-all duration-300 
+           hover:shadow-md hover:border-luxury-black/20;
+  }
+  
+  .luxury-input {
+    @apply bg-luxury-white border border-luxury-black/20 text-luxury-black 
+           rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold 
+           focus:border-luxury-black/50 transition-all duration-300;
+  }
+  
+  .luxury-badge {
+    @apply px-2 py-1 text-xs font-medium rounded-full 
+           bg-gold/20 text-gold;
+  }
+  
+  .luxury-badge-new {
+    @apply bg-gold/20 text-gold;
+  }
+  
+  .luxury-badge-hot {
+    @apply bg-red-500/20 text-red-500;
+  }
+  
+  .luxury-badge-sale {
+    @apply bg-green-500/20 text-green-500;
+  }
+}

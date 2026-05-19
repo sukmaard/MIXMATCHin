@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MIXMATCHin - Fashion Showcase</title>
+    <meta name="description" content="Premium fashion showcase website with mix & match outfit feature" />
+    <script type="module" crossorigin src="/assets/index-B4J50tVm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-VbMFB4e-.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.addEventListener('error', function(e) {
+        if (!('message' in e)) return;
+        console.error('[GLOBAL ERROR]', e.message, 'at', e.filename, ':', e.lineno, ':', e.colno);
+        var el = document.createElement('div');
+        el.style.cssText = 'position:fixed;inset:0;background:#fee;color:#c00;padding:24px;font-family:monospace;z-index:99999;overflow:auto;font-size:14px;line-height:1.5;';
+        el.innerHTML = '<h2 style="margin:0 0 12px">Runtime Error</h2><pre>' + (e.message || 'Unknown error') + '\nat ' + (e.filename || '') + ':' + (e.lineno || '') + ':' + (e.colno || '') + '</pre>';
+        document.body.appendChild(el);
+      }, true);
+      window.addEventListener('unhandledrejection', function(e) {
+        console.error('[UNHANDLED REJECTION]', e.reason);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+import { jsx, jsxs } from "react/jsx-runtime";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import ProductCatalog from "./pages/ProductCatalog";
+import ProductDetail from "./pages/ProductDetail";
+import MixMatch from "./pages/MixMatch";
+import ProductUpload from "./pages/ProductUpload";
+import InstagramFeedUpload from "./pages/InstagramFeedUpload";
+import AdminLogin from "./pages/AdminLogin";
+import NotFound from "./pages/NotFound";
+import ProtectedRoute from "./components/ProtectedRoute";
+function App() {
+  return /* @__PURE__ */ jsx(AuthProvider, { children: /* @__PURE__ */ jsx(BrowserRouter, { children: /* @__PURE__ */ jsxs("div", { className: "min-h-screen bg-luxury-white text-luxury-black", children: [
+    /* @__PURE__ */ jsx(Header, {}),
+    /* @__PURE__ */ jsx("main", { children: /* @__PURE__ */ jsxs(Routes, { children: [
+      /* @__PURE__ */ jsx(Route, { path: "/", element: /* @__PURE__ */ jsx(HomePage, {}) }),
+      /* @__PURE__ */ jsx(Route, { path: "/catalog", element: /* @__PURE__ */ jsx(ProductCatalog, {}) }),
+      /* @__PURE__ */ jsx(Route, { path: "/product/:id", element: /* @__PURE__ */ jsx(ProductDetail, {}) }),
+      /* @__PURE__ */ jsx(Route, { path: "/mix-match", element: /* @__PURE__ */ jsx(MixMatch, {}) }),
+      /* @__PURE__ */ jsx(Route, { path: "/admin/login", element: /* @__PURE__ */ jsx(AdminLogin, {}) }),
+      /* @__PURE__ */ jsx(
+        Route,
+        {
+          path: "/upload",
+          element: /* @__PURE__ */ jsx(ProtectedRoute, { children: /* @__PURE__ */ jsx(ProductUpload, {}) })
+        }
+      ),
+      /* @__PURE__ */ jsx(
+        Route,
+        {
+          path: "/instagram-upload",
+          element: /* @__PURE__ */ jsx(ProtectedRoute, { children: /* @__PURE__ */ jsx(InstagramFeedUpload, {}) })
+        }
+      ),
+      /* @__PURE__ */ jsx(Route, { path: "*", element: /* @__PURE__ */ jsx(NotFound, {}) })
+    ] }) }),
+    /* @__PURE__ */ jsx(Footer, {})
+  ] }) }) });
+}
+export default App;
