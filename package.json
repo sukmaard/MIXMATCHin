@@ -8,7 +8,8 @@
     "dev:full": "node server/dev.cjs",
     "api": "node server/index.cjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "framer-motion": "^10.0.0",
@@ -24,6 +25,7 @@
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4",
-    "vite": "^6.0.0"
+    "vite": "^6.0.0",
+    "wrangler": "^4.93.1"
   }
 }
